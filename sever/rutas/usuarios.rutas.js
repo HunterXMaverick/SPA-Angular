@@ -28,7 +28,7 @@ api.put('/update_usuario/:id', aunteticacionControl.autentificar, usuarioControl
 api.put('/update_usuarios/:id', aunteticacionControl.autentificar, usuarioControl.updateUsuario)
 
 //ver usuario
-api.get('/usuario/:id', aunteticacionControl.autentificar, usuarioControl.getUsuarioId)
+api.get('/usuario/:id', usuarioControl.getUsuarioId)
 
 //borrar usuario
 api.delete('/delete_usuario', aunteticacionControl.autentificar, usuarioControl.deleteUsuario)
