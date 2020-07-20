@@ -3,16 +3,10 @@
 
 const env = require('dotenv').config(),
       app = require('./app'),
-      port = process.env.PORT || 3000,
-      fs = require('fs')
-    //   ,
-    //    httpsOptions = {
-    //     key: fs.readFileSync("./config/key.pem"),
-    //     cert: fs.readFileSync("./config/cert.pem")
-    //   }
+      port = process.env.PORT || 3000
 
 let http = require('http').Server(app),
-    io = require('../controles/socket.control')(http)
+    io = require('../sockets/socket.control')(http)
 
 http.listen(port, (err) => {
     if (!err) {

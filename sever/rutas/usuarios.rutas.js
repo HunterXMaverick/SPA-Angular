@@ -4,7 +4,7 @@ const express = require('express'),
     multiParty = require('connect-multiparty'),
     passwordControl = require('../autentificacion/password'),
     aunteticacionControl = require('../autentificacion/autentificar'),
-    rolControl = require('../autentificacion/rol')
+    rolesControl = require('../autentificacion/rol')
 
 let api = express.Router(),
     usuarioControl = require('../controles/usuarios.control'),
